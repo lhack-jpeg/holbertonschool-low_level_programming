@@ -1,2 +1,2 @@
-u#!/bin/bash
+#!/bin/bash
 gcc -S -masm=intel $CFILE
