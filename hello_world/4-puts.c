@@ -3,6 +3,7 @@
 
 /**
  *main -  to print out string
+ *Return - return status
  */
 int main(void)
 {
