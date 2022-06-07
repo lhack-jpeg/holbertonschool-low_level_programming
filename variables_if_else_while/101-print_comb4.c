@@ -12,7 +12,7 @@ int main(void)
 	int k;
 
 	i = '0';
-	while (i < '7')
+	while (i <= '7')
 	{
 		j = (i + 1);
 		while (j <= '8')
