@@ -9,8 +9,8 @@ int main(void)
 {
 	int i = 0;
 	unsigned long int fib_num = 0;
-	long int number_1 = 1;
-	long int number_2 = 2;
+	long int number_1 = 0;
+	long int number_2 = 1;
 
 	while (i < 50)
 	{
