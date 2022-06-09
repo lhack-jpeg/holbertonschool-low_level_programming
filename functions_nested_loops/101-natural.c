@@ -2,7 +2,7 @@
 /**
  *main - prints the value of the numbers form 0  to 1024 that are multiples of
  * 32 or 5
- *Returns: 0
+ *Return: always returns 0
  */
 
 int main(void)
