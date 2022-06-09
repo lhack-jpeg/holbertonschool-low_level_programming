@@ -5,7 +5,7 @@
  *Return:
  */
 
-void totalsum(void)
+int main(void)
 {
 	int i = 0;
 	int total_value = 0;
@@ -17,5 +17,7 @@ void totalsum(void)
 		i++;
 	}
 
-	printf("%d", total_value);
+	printf("%d\n", total_value);
+
+	return (0);
 }
