@@ -15,7 +15,12 @@ int main(void)
 	while (i < 50)
 	{
 		fib_num = number_1 + number_2;
-		printf("%lu ,", fib_num);
+		printf("%lu", fib_num);
+		if (i < 49)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		number_1 = number_2;
 		number_2 = fib_num;
 		i++;
