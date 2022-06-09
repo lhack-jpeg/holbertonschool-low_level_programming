@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *totalsum - 
- *
- *Return:
+ *main - prints the value of the numbers form 0  to 1024 that are multiples of 3
+ * or 5
+ *Returns: 0
  */
 
 int main(void)
