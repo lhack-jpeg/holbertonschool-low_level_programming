@@ -18,7 +18,7 @@ void print_diagonal(int n)
 		{
 			j = 0;
 			/*Loop to add more whitespace*/
-			while (j <= i)
+			while (j < i)
 			{
 				_putchar(' ');
 				j++;
