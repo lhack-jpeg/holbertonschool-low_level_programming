@@ -3,6 +3,7 @@
 /**
  *print_diagonal - prints out '\' followed by '\n'
  * lines are indented further with white space depending on size of n
+ *@n: determines how many to print diagonally down
  *Return: void
  */
 
