@@ -11,12 +11,11 @@ char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
-	memset(dest, '\0', sizeof(dest));
-        /*Loop over each index in src*/
-	while (src[i])
+	/*Copy while check for null operator*/
+	while (src[i] != '\0')
 	{
 		/*Assign the value of each index*/
-		*(dest + i) = *(src + i);
+		dest[i] = src[i];
 		i++;
 	}
 
