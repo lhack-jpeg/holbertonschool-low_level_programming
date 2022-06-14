@@ -11,7 +11,8 @@ char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
-	/*Loop over each index in src*/
+	memset(dest, '\0', sizeof(dest));
+        /*Loop over each index in src*/
 	while (src[i])
 	{
 		/*Assign the value of each index*/
