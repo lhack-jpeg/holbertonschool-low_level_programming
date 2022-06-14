@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	len = strlen(s);
 	/*change position to end of array*/
-	for (i = 0; i < len -1; i++)
+	for (i = 0; i < len - 1; i++)
 		end_ptr++;
 	/*Iterates over the array and reverses the order*/
 	for (i = 0; i < len / 2; i++)
