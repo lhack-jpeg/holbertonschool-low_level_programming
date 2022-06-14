@@ -15,7 +15,10 @@ char *_strcpy(char *dest, char *src)
 	while (src[i])
 	{
 		/*Assign the value of each index*/
-		dest[i] = src[i];
+		while (*(src++))
+		{
+			dest[i] = src[i];
+		}
 		i++;
 	}
 
