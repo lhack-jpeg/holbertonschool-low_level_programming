@@ -14,7 +14,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int i = 0;
 
 	/*Iterates over each item in src string*/
-	for (i = 0; i < n && src[i] != '\0'; i ++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
 	/*Adds a null character into the string if necessary*/
 	for ( ; i < n; i++)
