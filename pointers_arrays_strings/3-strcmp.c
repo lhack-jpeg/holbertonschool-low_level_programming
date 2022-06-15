@@ -12,7 +12,7 @@ int _strcmp(char *s1, char *s2)
 	int value = 0, i = 0;
 
 	/*Continue loop while each char is the same value*/
-	while (*(s1 + i) == *(s2 + 1))
+	while (*(s1 + i) == *(s2 + i))
 	{
 		/*Break the loop if char is null*/
 		if (*(s1 + i) == '\0')
