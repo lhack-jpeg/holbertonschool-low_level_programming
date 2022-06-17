@@ -14,7 +14,7 @@ void print_diagsums(int *a, int size)
 	{
 		/*This finds the pointer for the element in the array*/
 		ptr = (i * size) + i;
-		sum_1 = sum_1 + *(a+ptr);
+		sum_1 = sum_1 + *(a + ptr);
 	}
 	for (j = 0; j < size; j++)
 	{
