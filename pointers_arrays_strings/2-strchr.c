@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * _strchr - returns a pointer the address of the char if found else null
  * @s: the address to the string
@@ -11,6 +12,7 @@ char *_strchr(char *s, char c)
 	int i;
 
 	i = 0;
+
 	/*Loop until null terminator*/
 	while (s[i] != '\0')
 	{
@@ -21,6 +23,8 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
+	if (c == '\0')
+		return(&s[i]);
 	/*If char doesn't match any from array, return null term*/
 	return (NULL);
 }
