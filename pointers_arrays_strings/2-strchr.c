@@ -22,5 +22,5 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 	/*If char doesn't match any from array, return null term*/
-	return ('\0');
+	return (NULL);
 }
