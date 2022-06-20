@@ -4,7 +4,7 @@
  * issqrt_rec - checks to see recursively for a natural square root
  * @x: the starting number
  * @n: the number checking against
- * return: int
+ * Return: int
  */
 
 int issqrt_rec(int x, int n)
