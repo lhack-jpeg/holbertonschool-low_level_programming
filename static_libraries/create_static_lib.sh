@@ -1,4 +1,12 @@
 #!/bin/bash
 
-gcc -c $(*.c);
-ar rc liball.a $(*.o);
+LIST=$(ls ./*.c)
+for i in $LIST
+do
+    gcc -c "$i"
+done
+LIST2=$(ls ./*.o)
+for j in $LIST2
+do
+    ar rc liball.a "$j"
+done
