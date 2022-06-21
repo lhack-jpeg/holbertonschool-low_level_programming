@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 	arr = malloc(sizeof(*arr) * height);
 	if (arr == NULL)
 	{
-		/*free(arr);*/
+		/*If top level array fails you don't have to free(arr)*/
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
@@ -26,12 +26,21 @@ int **alloc_grid(int width, int height)
 
 		if (arr[i] == NULL)
 		{
+			/**
+			 *If the arr[i] fails, no memory is alloc
+			 * this means we need to go back one array and
+			 * free the previous alloc arrays
+			 */
 			i = i - 1;
 			while (i >= 0)
 			{
 				free(arr[i]);
 				i--;
 			}
+			/**
+			 * after *ptr is freeed
+			 * free the **ptr
+			 */
 			free(arr);
 			return (NULL);
 		}
