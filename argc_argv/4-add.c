@@ -9,11 +9,14 @@
 
 int check_alpha(char *s)
 {
-	/*Gets the first index of the pointer and checks if alpha*/
-	if (isalpha(s[0]))
-		return (1);
-	else
-		return (0);
+	/*Iterates over the pointer and checks if alpha*/
+	while (*s != '\0')
+	{
+		if (isalpha(*s))
+			return (1);
+		s++;
+	}
+	return (0);
 }
 
 
