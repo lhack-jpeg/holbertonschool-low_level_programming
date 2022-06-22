@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * rot13 - Encodes a string given in rot 13
- * str - pointer to a string
+ * @str: pointer to a string
  *Return: pointer
  */
 
@@ -27,5 +27,5 @@ char *rot13(char *str)
 		}
 		i++;
 	}
-	return (0);
+	return (str);
 }
