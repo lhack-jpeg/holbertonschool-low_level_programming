@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+
 /**
  * printable - check if a char is printable char
  * @c: char being check
@@ -12,6 +13,7 @@ int printable(int c)
 
 	return ('.');
 }
+
 /**
  * printhex - print the 2 place hex codes in lower case
  * @b: pointer to string
@@ -41,8 +43,9 @@ void printhex(char *b, int count, int size)
 		printf("%*c", right_pad_space, ' ');
 	}
 }
+
 /**
- * pointchar - function to print char
+ * printchar - function to print char
  * @b: string
  * @count: int for line count
  * @size: size of buffer
