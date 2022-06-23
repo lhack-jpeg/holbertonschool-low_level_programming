@@ -9,6 +9,7 @@ int printable(int c)
 {
 	if (isprint(c))
 		return (c);
+
 	return ('.');
 }
 /**
@@ -20,30 +21,23 @@ int printable(int c)
  */
 void printhex(char *b, int count, int size)
 {
-	int i;
+	int i, right_pad_space;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 10; i += 2)
 	{
-		if (size - i - count > 0)
-		{
-			printf("%02x", b[i + count]);
-			if (i % 2 == 1)
-				putchar(' ');
-		}
-		else
-		{
-			while (i < 10)
-			{
-				printf("  ");
-				if (i % 2 == 1)
-					putchar(' ');
-				i++;
-			}
-		}
+		if (count + i >= size)
+			break;
+
+		printf("%02x%02x ", b[count + i], b[count + i + 1]);
+	}
+	right_pad_space = (10 - i) * 2 + ((10 - i) / 2);
+	if (right_pad_space > 0)
+	{
+		printf("%*c", right_pad_space, ' ');
 	}
 }
 /**
- * printchar -  function to print char
+ * pointchar - function to print char
  * @b: string
  * @count: int for line count
  * @size: size of buffer
@@ -56,13 +50,11 @@ void printchar(char *b, int count, int size)
 
 	for (i = 0; i < 10; i++)
 	{
-		if (size - i - count > 0)
-		{
-			ch = printable(b[i + count]);
-			printf("%c", ch);
-		}
-		else
+		if (count + i > size)
 			break;
+
+		ch = printable(b[i + count]);
+		printf("%c", ch);
 	}
 }
 
@@ -79,7 +71,7 @@ void print_buffer(char *b, int size)
 	int count = 0;
 
 	if (size == 0)
-		printf("\n");
+		putchar('\n');
 	else
 	{
 		while (count < size)
