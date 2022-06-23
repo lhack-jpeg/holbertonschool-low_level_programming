@@ -23,12 +23,17 @@ void printhex(char *b, int count, int size)
 {
 	int i, right_pad_space;
 
-	for (i = 0; i < 10; i += 2)
+	for (i = 0; i < 10; i++)
 	{
 		if (count + i >= size)
+		{
+			putchar(' ');
 			break;
+		}
 
-		printf("%02x%02x ", b[count + i], b[count + i + 1]);
+		printf("%02x", b[count + i]);
+		if (i % 2 == 1)
+			putchar(' ');
 	}
 	right_pad_space = (10 - i) * 2 + ((10 - i) / 2);
 	if (right_pad_space > 0)
@@ -50,7 +55,7 @@ void printchar(char *b, int count, int size)
 
 	for (i = 0; i < 10; i++)
 	{
-		if (count + i > size)
+		if (count + i >= size)
 			break;
 
 		ch = printable(b[i + count]);
