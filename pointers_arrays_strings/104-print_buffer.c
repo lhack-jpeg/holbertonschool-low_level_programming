@@ -79,12 +79,17 @@ void print_buffer(char *b, int size)
 {
 	int count = 0;
 
-	while (count < size)
-	{
-		printf("000000%02x: ", count);
-		printhex(b, count, size);
-		printchar(b, count, size);
+	if (size == 0)
 		putchar('\n');
-		count += 10;
+	else
+	{
+		while (count < size)
+		{
+			printf("000000%02x: ", count);
+			printhex(b, count, size);
+			printchar(b, count, size);
+			putchar('\n');
+			count += 10;
+		}
 	}
 }
