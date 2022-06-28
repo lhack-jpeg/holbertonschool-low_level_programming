@@ -41,9 +41,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		str2len = _strlen(s2);
 	if (str2len > n)
-	{
 		str2len = n;
-	}
+
 	totallen = str1len + str2len;
 
 	dest = malloc(sizeof(*dest) * totallen + n);
