@@ -32,10 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *dest;
 	unsigned int i, j, str1len, str2len, totallen;
 
-	if (s1 == 0)
+	if (s1 == NULL)
 		s1 = "";
 
-	if (s2 == 0)
+	if (s2 == NULL)
 		s2 = "";
 
 	str1len = _strlen(s1);
