@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	str1len = _strlen(s1);
 	str2len = _strlen(s2);
-	(str2len > n)
+	if (str2len > n)
 		str2len = n;
 
 	totallen = str1len + str2len;
