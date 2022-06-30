@@ -19,7 +19,7 @@ int main(__attribute__ ((unused)) int argc, char *argv[])
 	/* printf("%s: argv[2]\n", s); */
 	/* printf("Num1: %d, num2: %d\n", num1, num2); */
 	result = get_op_func(s)(num1, num2);
-	printf("Result: %d\n", result);
+	printf("%d\n", result);
 
 	return (0);
 }
