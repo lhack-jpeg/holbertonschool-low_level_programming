@@ -10,7 +10,7 @@
 
 int main(__attribute__ ((unused)) int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2, result, (*func)(int, int);
 	char *s;
 
 	if (argc != 4)
@@ -23,13 +23,14 @@ int main(__attribute__ ((unused)) int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	/* printf("%s: argv[2]\n", s); */
 	/* printf("Num1: %d, num2: %d\n", num1, num2); */
-	result = get_op_func(s)(num1, num2);
+	func = get_op_func(s);
 
-	if (!result)
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	result = func(num1, num2);
 	printf("%d\n", result);
 
 	return (0);
