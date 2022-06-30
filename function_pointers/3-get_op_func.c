@@ -26,10 +26,10 @@ int (*get_op_func(char *s))(int, int)
 		{
 			return (ops[i].f);
 		}
-		printf("i: %d\n", i);
+		/* printf("i: %d\n", i); */
 		i++;
 	}
 
-	printf("This is the argv passed through: %s\n", s);
+	/* printf("This is the argv passed through: %s\n", s); */
 	return (0);
 }
