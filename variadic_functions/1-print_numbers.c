@@ -24,7 +24,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	count = 0;
 	while (count < n)
 	{
-		printf("%d%s", va_arg(ptr, int), sep);
+		printf("%d", va_arg(ptr, int));
+		if (count < n - 1)
+			printf("%s", sep);
 		count++;
 	}
 	printf("\n");
