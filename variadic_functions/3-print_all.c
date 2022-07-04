@@ -77,7 +77,7 @@ void print_float(va_list arg)
 void print_all(const char * const format, ...)
 {
 	int i, j;
-	char *sep="";
+	char *sep = "";
 
 	va_list ptr;
 	my_print func[] = {
