@@ -5,7 +5,7 @@
 
 /**
  * print_strings - prints new strings followed by new line
- * @separator - separator between strings
+ * @separator: separator between strings
  * @n: count of args
  *Return: void
  */
