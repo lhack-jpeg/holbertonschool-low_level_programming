@@ -22,13 +22,14 @@ int _strlen_recursion(char *s)
  * Return: int, 1 if true, 0 otherwise
  */
 
-int check_pal(char *s,int index, int len)
+int check_pal(char *s, int index, int len)
 {
 	int end = len - index - 1;
+
 	if (index == (len / 2))
 		return (1);
 	if (s[index] != s[end])
-		return 0;
+		return (0);
 	return (check_pal(s, index + 1, len));
 }
 
