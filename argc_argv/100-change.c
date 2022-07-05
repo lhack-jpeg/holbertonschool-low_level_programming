@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
 
 	change = atoi(argv[1]);
 
-	if (change < 0)
-		printf("%d\n", count);
 	while (change >= 0 && coin[i])
 	{
 		if (change >= coin[i])
