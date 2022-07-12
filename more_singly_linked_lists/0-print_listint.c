@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_list - prints the elements of a struct list
+ * print_listint - prints the elements of a struct list
  * @h: pointer to struct list item
  *Return: size_t of number of elements
  */
