@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdlib.h>
 /**
  *_abs - Calculates the absolute value of the integer
@@ -8,7 +7,8 @@
 
 int _abs(int j)
 {
-	int i = abs(j);
-
-	return (i);
+	if (j < 0)
+		j = j * -1;
+	
+	return (j);
 }
