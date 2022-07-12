@@ -50,14 +50,3 @@ char *_strdup(char *str)
 
 	return (dest);
 }
-
-int main(void)
-{
-	char *str = _strdup("hello");
-	char str1[] = "hello";
-
-	str1[0] = 'a';
-	str[0]= 'a';
-	
-	return (0);
-}
