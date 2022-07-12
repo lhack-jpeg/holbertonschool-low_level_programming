@@ -28,3 +28,4 @@ void print_diagsums(int *a, int size);
 int _atoi(char *s);
 void print_number(int n);
 char *rot13(char *);
+void print_buffer(char *b, int size);
