@@ -36,7 +36,7 @@ char *_strdup(char *str)
 
 	i = _strlen(str);
 
-	dest = malloc(sizeof(char) * i + 1);
+	dest = malloc(sizeof(*dest) * i + 1);
 	if (dest == NULL)
 		return (NULL);
 
@@ -49,4 +49,15 @@ char *_strdup(char *str)
 	dest[j] = '\0';
 
 	return (dest);
+}
+
+int main(void)
+{
+	char *str = _strdup("hello");
+	char str1[] = "hello";
+
+	str1[0] = 'a';
+	str[0]= 'a';
+	
+	return (0);
 }
