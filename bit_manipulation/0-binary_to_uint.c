@@ -3,7 +3,8 @@
 /**
  * binary_to_uint - convert string of 0 & 1 to unsigned int
  * @b: pointer to string
- *Return: 0 if b is NULL or contains char that is greater than 1 else return int
+ * Return: 0 if b is NULL or contains char that is greater than 1 else return
+ * int
  */
 
 unsigned int binary_to_uint(const char *b)
@@ -35,5 +36,5 @@ unsigned int binary_to_uint(const char *b)
 		len--;
 	}
 
-	return num;
+	return (num);
 }
