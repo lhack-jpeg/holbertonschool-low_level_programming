@@ -34,7 +34,8 @@ SRC5=	5-main.c \
 	5-get_dnodeint.c
 
 TARGET6=i
-SRC6=	3-add_dnodeint_end.c \
+SRC6=	6-main.c \
+	3-add_dnodeint_end.c \
 	4-free_dlistint.c \
 	6-sum_dlistint.c
 
