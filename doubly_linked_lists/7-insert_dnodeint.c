@@ -20,7 +20,7 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * insert_dnodeint_at_index -
+ * insert_dnodeint_at_index - insert node at given index in double linked list
  * @h: pointer to pointer for start of double linked list
  * @idx: index on where to insert node
  * @n: int to stored in node
