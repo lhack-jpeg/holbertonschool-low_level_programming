@@ -30,7 +30,7 @@ size_t dlistint_len(const dlistint_t *h)
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int len, count = 0;
-	dlistint_t *new, *nodebefore, *nodeafter;
+	dlistint_t *new, *nodebefore;
 
 	len = dlistint_len(*h);
 
@@ -57,12 +57,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (count == idx - 1)
 		{
-			nodeafter = nodebefore->next;
-			new->next = nodeafter;
+			new->next = nodebefore->next;
 			new->prev = nodebefore;
 			nodebefore->next = new;
-			if (nodeafter != NULL)
-				nodeafter->prev = new;
+			if (new->next != NULL)
+				new->next->prev = new;
 		}
 		count++;
 		nodebefore = nodebefore->next;
