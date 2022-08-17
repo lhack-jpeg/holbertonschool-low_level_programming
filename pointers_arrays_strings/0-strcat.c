@@ -11,7 +11,13 @@ char *_strcat(char *dest, char *src)
 {
 	int i = 0, len;
 
-	len = strlen(dest);
+	if (dest == NULL)
+		return (NULL);
+
+	if (src == NULL || *src == '\0')
+		return (dest);
+
+	len = _strlen(dest);
 	/*Copy while check for null operator*/
 	while (src[i] != '\0')
 	{
@@ -19,6 +25,6 @@ char *_strcat(char *dest, char *src)
 		dest[len + i] = src[i];
 		i++;
 	}
-
+	dest[len + i] = '\0';
 	return (dest);
 }
