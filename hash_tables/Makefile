@@ -51,6 +51,15 @@ SRC6= 	6-main.c \
 	5-hash_table_print.c \
 	6-hash_table_delete.c
 
+SRC7= 	0-hash_table_create.c \
+	1-djb2.c \
+	2-key_index.c \
+	3-hash_table_set.c \
+	4-hash_table_get.c \
+	5-hash_table_print.c \
+	6-hash_table_delete.c
+
+
 all: 0 1 2 3 4 5 6
 
 clean:
@@ -74,3 +83,6 @@ re: clean all
 	$(CC) $(CFLAGS) $(SRC5) -o $(TARGET5)
 6:
 	$(CC) $(CFLAGS) $(SRC6) -o $(TARGET6)
+
+betty:
+	$(BETTY) $(SRC7)
