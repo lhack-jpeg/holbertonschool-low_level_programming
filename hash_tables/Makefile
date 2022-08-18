@@ -1,7 +1,7 @@
 CC=gcc
-CFLAGS=-Wall -pedantic -Werror -Wextra -std=gnu89
+CFLAGS=-Wall -pedantic -Werror -Wextra -std=gnu89 -g
 RM=rm -rf
-VALGRIND=valgrind --leak-check=full --show-leak-kinds=all
+VALGRIND=valgrind --leak-check=full --show-leak-kinds=all ./g
 BETTY=betty
 
 TARGET0=a
@@ -86,3 +86,6 @@ re: clean all
 
 betty:
 	$(BETTY) $(SRC7)
+
+val:
+	$(VALGRIND)
