@@ -31,7 +31,7 @@ void hash_table_print(const hash_table_t *ht)
 			value = node->value;
 			if (flag != 0)
 			{
-				printf(" ,");
+				printf(", ");
 			}
 			printf("\'%s\': \'%s\'", key, value);
 			flag++;
