@@ -1,0 +1,55 @@
+CC=gcc
+CFLAGS=-Wall -Werror -Wextra -pedantic -std=gnu89
+RM=rm -rf
+
+TARGET0=a
+SRC0=	0-main.c \
+	0-linear.c
+
+TARGET1=b
+SRC1=	1-main.c \
+	1-binary.c
+
+TARGET2=c
+SRC2=	100-main.c \
+	100-jump.c
+
+TARGET3=d
+SRC3=	102-main.c \
+	102-interpolation.c
+
+TARGET4=e
+SRC4=	103-main.c \
+	103-exponential.c
+
+TARGET5=h
+SRC5=	104-main.c \
+	104-advanced_binary.c
+
+all: 0 1 2 3 4 5
+
+clean:
+	$(RM) *~ \#*\# \.\#* \
+        $(TARGET0) $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) \
+        $(TARGET5)
+
+re: clean all
+
+0:
+	$(CC) $(CFLAGS) $(SRC0) -o $(TARGET0)
+1:
+	$(CC) $(CFLAGS) $(SRC1) -o $(TARGET1)
+2:
+	$(CC) $(CFLAGS) -lm $(SRC2) -o $(TARGET2)
+3:
+	$(CC) $(CFLAGS) $(SRC3) -o $(TARGET3)
+4:
+	$(CC) $(CFLAGS) $(SRC4) -o $(TARGET4)
+5:
+	$(CC) $(CFLAGS) $(SRC5) -o $(TARGET5)
+6:
+	$(CC) $(CFLAGS) $(SRC6) -o $(TARGET6)
+7:
+	$(CC) $(CFLAGS) $(SRC7) -o $(TARGET7)
+8:
+	$(CC) $(CFLAGS) $(SRC8) -o $(TARGET8)
