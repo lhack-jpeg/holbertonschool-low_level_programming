@@ -40,7 +40,7 @@ re: clean all
 1:
 	$(CC) $(CFLAGS) $(SRC1) -o $(TARGET1)
 2:
-	$(CC) $(CFLAGS) -lm $(SRC2) -o $(TARGET2)
+	$(CC) $(CFLAGS) $(SRC2) -lm -o $(TARGET2)
 3:
 	$(CC) $(CFLAGS) $(SRC3) -o $(TARGET3)
 4:
