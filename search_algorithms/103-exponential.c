@@ -28,6 +28,9 @@ int b_search(int *array, int low, int high, int value)
 		if (value == array[mid])
 			return (mid);
 
+		if (value == array[low + 1])
+			return (low + 1);
+
 		if (array[mid] < value)
 			low = mid + 1;
 		else
