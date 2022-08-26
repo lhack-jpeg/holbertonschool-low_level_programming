@@ -58,14 +58,15 @@ int exponential_search(int *array, size_t size, int value)
 		if (array[step] >= value)
 		{
 			printf("Value found between indexes [%ld] and [%ld]\n",
-			       step / 2, step);
+			       step / 2, step - 1);
 			idx = b_search(array, step / 2, step - 1, value);
 			return (idx);
 		}
-		printf("Value check array[%ld] = [%d]\n", step, array[step]);
+		printf("Value checked array[%ld] = [%d]\n", step, array[step]);
 		step *= 2;
 	}
-	printf("Value found between indexes [%ld] and [%ld]\n", step / 2, step);
+	printf("Value found between indexes [%ld] and [%ld]\n",
+	       step / 2, step - 1);
 	idx = b_search(array, step / 2, step - 1, value);
 	return (idx);
 }
