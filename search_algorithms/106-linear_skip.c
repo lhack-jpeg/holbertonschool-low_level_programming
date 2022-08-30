@@ -51,13 +51,12 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	}
 	if (node->n >= value)
 	{
-		
 		val_found(temp->index, node->index);
 		while (temp != node)
 		{
+			val_check(temp->index, temp->n);
 			if (temp->n == value)
 				return (temp);
-			val_check(temp->index, temp->n);
 			temp = temp->next;
 		}
 	}
