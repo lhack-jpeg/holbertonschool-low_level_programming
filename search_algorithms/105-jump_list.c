@@ -61,14 +61,12 @@ void print_func_2(size_t x, int y)
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t step, idx = 0, j;
+	size_t step = sqrt(size), idx = 0 + step, j;
 	listint_t *node;
 
 	if (list == NULL)
 		return (NULL);
 	node = list;
-	step = sqrt(size);
-	idx = idx + step;
 	while (idx < size)
 	{
 		node = get_nodeint_at_index(list, idx);
@@ -87,6 +85,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		}
 		if (idx + step >= size)
 		{
+			node = get_nodeint_at_index(list, size - 1);
+			print_func_2(size - 1, node->n);
 			node = get_nodeint_at_index(list, idx);
 			print_func(idx, size - 1);
 			for (j = idx; j < size; j++)
