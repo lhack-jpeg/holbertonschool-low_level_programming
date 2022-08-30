@@ -26,12 +26,17 @@ TARGET5=h
 SRC5=	104-main.c \
 	104-advanced_binary.c
 
+TARGET6=g
+SRC6= 	105-main.c \
+	105-jump_list.c\
+	listint/*.c
+
 all: 0 1 2 3 4 5
 
 clean:
 	$(RM) *~ \#*\# \.\#* \
         $(TARGET0) $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) \
-        $(TARGET5)
+        $(TARGET5) $(TARGET6)
 
 re: clean all
 
@@ -48,7 +53,7 @@ re: clean all
 5:
 	$(CC) $(CFLAGS) $(SRC5) -o $(TARGET5)
 6:
-	$(CC) $(CFLAGS) $(SRC6) -o $(TARGET6)
+	$(CC) $(CFLAGS) $(SRC6) -lm -o $(TARGET6)
 7:
 	$(CC) $(CFLAGS) $(SRC7) -o $(TARGET7)
 8:
