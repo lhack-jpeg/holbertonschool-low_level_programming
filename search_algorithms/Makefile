@@ -31,12 +31,17 @@ SRC6= 	105-main.c \
 	105-jump_list.c\
 	listint/*.c
 
-all: 0 1 2 3 4 5
+TARGET7=i
+SRC7=	106-main.c \
+	106-linear_skip.c \
+	skiplist/*.c
+
+all: 0 1 2 3 4 5 6 7
 
 clean:
 	$(RM) *~ \#*\# \.\#* \
         $(TARGET0) $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4) \
-        $(TARGET5) $(TARGET6)
+        $(TARGET5) $(TARGET6) $(TARGET7)
 
 re: clean all
 
@@ -55,6 +60,6 @@ re: clean all
 6:
 	$(CC) $(CFLAGS) $(SRC6) -lm -o $(TARGET6)
 7:
-	$(CC) $(CFLAGS) $(SRC7) -o $(TARGET7)
+	$(CC) $(CFLAGS) $(SRC7) -lm -o $(TARGET7)
 8:
 	$(CC) $(CFLAGS) $(SRC8) -o $(TARGET8)
