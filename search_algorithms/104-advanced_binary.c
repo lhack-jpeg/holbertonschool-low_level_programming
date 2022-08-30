@@ -1,7 +1,12 @@
 #include "search_algos.h"
 
 /**
- *
+ * adv_bin - recursively search through array
+ * @array: pointer to first element
+ * @low: left side of array
+ * @high: right side of array
+ * @value: value to search for
+ * Return: index of value or -1 otherwise
  */
 
 int adv_bin(int *array, size_t low, size_t high, int value)
